@@ -29,7 +29,7 @@ jobs:
         with:
           distribution: goreleaser
           version: latest
-          args: -f .github/conf/.goreleaser.yml
+          args: -f .github/conf/.goreleaser.yml release --rm-dist --release-notes=./RELEASE_NOTES.md
           workdir: .
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
