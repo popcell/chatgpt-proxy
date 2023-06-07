@@ -1,0 +1,12 @@
+version: '3'
+
+services:
+  chatgpt-proxy:
+    build: .
+    container_name: chatgpt-proxy
+    restart: always
+    image: chatgpt-proxy
+    ports:
+      - "55555:55555"
+    volumes:
+      - ./config.yaml:/app/config.yaml

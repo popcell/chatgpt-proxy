@@ -37,7 +37,20 @@ api-proxy:
 # openai_proxy http://localhost:55555/openai-proxy
 # api_proxy http://localhost:55555/api-proxy
 ```
-
+## docker部署
+```shell
+wget https://raw.githubusercontent.com/popcell/chatgpt-proxy/master/config.yaml
+# 修改config.yaml
+docker build -t chatgpt-proxy .
+docker run -d --name chatgpt-proxy --restart always -p 55555:55555 -v $(pwd)/config.yaml:/app/config.yaml chatgpt-proxy
+```
+## docker-compose部署
+```shell
+wget https://raw.githubusercontent.com/popcell/chatgpt-proxy/master/config.yaml
+# 修改config.yaml
+docker build -t chatgpt-proxy .
+docker-compose up -d
+```
 ## 参考
 [通过tls指纹绕过cloudflare](https://github.com/acheong08/ChatGPT-Proxy-V4)
 
