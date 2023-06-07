@@ -1,0 +1,12 @@
+host: ""
+port: 55555
+proxy-url: ""
+openai-proxy:
+  enable: true
+  email: ""
+  password: ""
+  puid: ""
+  prefix: "openai-proxy"
+api-proxy:
+  enable: true
+  prefix: "api-proxy"
